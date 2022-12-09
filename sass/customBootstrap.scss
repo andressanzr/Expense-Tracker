@@ -1,0 +1,17 @@
+$primary:#00836d;
+
+
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+$custom-theme-colors:(
+"dark":#105a37,
+"lightDark":#1a652a,
+"medium":#00836d,
+"lightClear":#278664,
+"clear":#79a471
+);
+
+$theme-colors:map-merge($custom-theme-colors,$theme-colors);
+
+@import "../node_modules/bootstrap/scss/bootstrap";
