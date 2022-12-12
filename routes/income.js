@@ -5,11 +5,11 @@ const Expense = require("../models/expense");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("expenses/index");
+  res.render("");
 });
 router.post("/add", (req, res, next) => {
-  const { userId, name, amount, date, category } = req.body;
-  console.log(userId, name, amount, date, category);
+  const { userId, amount, date, category } = req.body;
+  console.log(userId, amount, category);
 });
 
 module.exports = router;

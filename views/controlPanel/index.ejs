@@ -1,0 +1,55 @@
+<% layout("layouts/boilerplate") %>
+
+    <div class="container text-center d-flex flex-column">
+        <h1>Control Panel</h1>
+        <div class="row">
+            <div class="col-10 offset-1 col-md-5 offset-md-1">
+                <form action="/expenses/add" method="post">
+                    <h3>Add expense</h3>
+                    <input type="hidden" name="userId" value="<%=currentUser._id%>">
+                    <input type="text" class="form-control" name="name" id="" placeholder="Name">
+                    <div class="input-group mt-2">
+                        <span class="input-group-text">$</span>
+                        <input type="number" name="amount" placeholder="amount" class="form-control "
+                            aria-label="Amount">
+                    </div>
+                    <input type="date" class="w-100 mt-2" name="date" id="">
+                    <select class="form-select mt-2" name="category" aria-label="Default select example">
+                        <option selected>Select a category</option>
+                        <option value="Food">Food</option>
+                        <option value="Clothes">Clothes</option>
+                        <option value="Transportation">Transportation</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Travel/Leisure">Travel/Leisure</option>
+                        <option value="Taxes">Taxes</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <button class="btn btn-primary mt-2">Add expense</button>
+                </form>
+
+            </div>
+            <div class="col-10 offset-1 col-md-5 offset-md-1">
+                <form action="/income/add" method="post">
+                    <h3>Add income</h3>
+                    <input type="hidden" name="userId" value="<%=currentUser._id%>">
+                    <input type="text" class="form-control" name="name" id="" placeholder="Name">
+                    <div class="input-group mt-2">
+                        <span class="input-group-text">$</span>
+                        <input type="number" name="amount" placeholder="amount" class="form-control "
+                            aria-label="Amount">
+                    </div>
+                    <input type="date" class="w-100 mt-2" name="date" id="">
+                    <select class="form-select mt-2" name="category" aria-label="Default select example">
+                        <option selected>Select a category</option>
+                        <option value="Work">Work</option>
+                        <option value="Unemployment benefit">Unemployment benefit</option>
+                        <option value="Pension">Pension</option>
+                        <option value="Self-employed">Self-employed</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <button class="btn btn-primary mt-2">Add income</button>
+                </form>
+            </div>
+        </div>
+    </div>
